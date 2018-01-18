@@ -3,7 +3,6 @@ import Router from 'vue-router'
 import ImgText from 'components/imgText/imgText'
 import Reading from 'components/reading/reading'
 import About from 'components/about/about'
-
 Vue.use(Router)
 
 export default new Router({

@@ -1,5 +1,6 @@
 <template>
   <div class="imgTextWrapper">
+
     <!-- <scroll class="scrollContent" :data="imgText" ref="scroll" :refresh="refresh"> -->
       <ul class="imgTextDetail">
         <li v-for="item in imgText" class="imgTextItem border-1px">
@@ -11,6 +12,7 @@
           <p class="picture-author">{{item.hp_author}} | {{item.image_authors}}</p>
           <p class="text-detail">{{item.hp_content}}</p>
           <p class="author">{{item.text_authors}}</p>
+          <span>{{message}}</span>
         </li>
       </ul>
       <div class="loadingContent">
@@ -28,6 +30,12 @@
   const month = new Date().getMonth() + 1;
   const day = new Date().getDate();
   export default {
+    props:{
+      message:{
+        type:String
+
+      }
+    },
     data(){
       return{
         imgText:[]
@@ -61,7 +69,7 @@
       padding-top:44px
       height:auto
       background:#f6f6f6
-      
+
       .imgTextItem
         margin-bottom:10px
         background:#fff
@@ -86,7 +94,7 @@
         margin-top:4px
       .imgWrapper
         display:block
-        img 
+        img
           display:block
           width:100%
           margin:15px 0
@@ -109,5 +117,5 @@
     .loadingContent
       width:100%
       display:flex
-      
+
 </style>

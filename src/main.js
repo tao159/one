@@ -2,9 +2,11 @@
 // (runtime-only or standalone) has been set in webpack.base.conf with an alias.
 import Vue from 'vue'
 import App from './App'
+import Vuex from 'vuex'
 import router from './router'
 import VueResource from 'vue-resource'
 import LazyLoad from 'vue-lazyload'
+import store from '@/store/store'
 import "@/common/stylus/iconfont.styl"
 Vue.use(VueResource)
 Vue.use(LazyLoad, {
@@ -16,6 +18,7 @@ Vue.config.productionTip = false
 new Vue({
     el: '#app',
     router,
+    store,
     template: '<App/>',
     components: { App }
 })

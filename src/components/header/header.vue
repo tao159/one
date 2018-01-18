@@ -1,21 +1,24 @@
 <template>
   <div class="header">
       <a href="javascript:;" class="left-menu-btn">
-          <i class="icon iconfont icon-category"></i>
+          <slot name='iconW'></slot>
       </a>
       {{title}}
   </div>
 </template>
 
 <script type="stext/ecmascript-6">
-export default {
-  props:{
-      title:{
-          type:String,
-          default:'一个'
-      }
+  export default {
+    props:{
+        title:{
+            type:String,
+            default:'一个'
+        }
+    },
+    methods:{
+
+    }
   }
-}
 </script>
 
 <style scoped lang="stylus" rel="stylesheet/stylus">
@@ -34,12 +37,12 @@ export default {
        background:#fff
        a
            position:absolute;
-        i 
+        i
             font-size:22px
             padding:10px
             color:#333
         .left-menu-btn
             left:0px
-        .search-wrapper   
+        .search-wrapper
             right:0px
 </style>
