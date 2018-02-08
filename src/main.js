@@ -7,7 +7,7 @@ import router from './router'
 import VueResource from 'vue-resource'
 import LazyLoad from 'vue-lazyload'
 import store from '@/store/store'
-import "@/common/stylus/iconfont.styl"
+import "@/common/fonts/iconfont.css"
 Vue.use(VueResource)
 Vue.use(LazyLoad, {
     loading: require("common/img/lazyload.jpg")

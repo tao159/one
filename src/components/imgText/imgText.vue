@@ -1,18 +1,18 @@
 <template>
   <div class="imgTextWrapper">
-
     <!-- <scroll class="scrollContent" :data="imgText" ref="scroll" :refresh="refresh"> -->
       <ul class="imgTextDetail">
         <li v-for="item in imgText" class="imgTextItem border-1px">
-          <p class="date">{{item.hp_makettime.split(' ')[0]}}</p>
-          <p class="issue-no">{{item.hp_title}}</p>
-          <router-link to="" class="imgWrapper">
-            <img v-lazy="item.hp_img_url" alt="">
+            <p class="date">{{item.hp_makettime.split(' ')[0]}}</p>
+            <p class="issue-no">{{item.hp_title}}</p>
+            <a href="#"class="imgWrapper">
+              <img v-lazy="item.hp_img_url" alt="">
+            </a>
+            <p class="picture-author">{{item.hp_author}} | {{item.image_authors}}</p>
+            <p class="text-detail">{{item.hp_content}}</p>
+            <p class="author">{{item.text_authors}}</p>
+            <span></span>
           </router-link>
-          <p class="picture-author">{{item.hp_author}} | {{item.image_authors}}</p>
-          <p class="text-detail">{{item.hp_content}}</p>
-          <p class="author">{{item.text_authors}}</p>
-          <span>{{message}}</span>
         </li>
       </ul>
       <div class="loadingContent">
@@ -30,12 +30,6 @@
   const month = new Date().getMonth() + 1;
   const day = new Date().getDate();
   export default {
-    props:{
-      message:{
-        type:String
-
-      }
-    },
     data(){
       return{
         imgText:[]

@@ -3,20 +3,17 @@
       <a href="javascript:;" class="left-menu-btn">
           <slot name='iconW'></slot>
       </a>
-      {{title}}
+      {{this.$route.meta.title}}
   </div>
 </template>
 
 <script type="stext/ecmascript-6">
   export default {
-    props:{
-        title:{
-            type:String,
-            default:'一个'
-        }
-    },
     methods:{
 
+    },
+    mounted(){
+      console.log(this.$route.meta.title)
     }
   }
 </script>

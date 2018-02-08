@@ -4,8 +4,9 @@
     <p>{{message}}</p>
       <div class="link">
           <p @click='toggleMenu'><router-link to="/imgText">图文</router-link></p>
-          <p @click='toggleMenu'><router-link to="/reading" @click='toggleMenu'>阅读</router-link></p>
-          <p @click='toggleMenu'><router-link to="/about" @click='toggleMenu'>关于</router-link></p>
+          <p @click='toggleMenu'><router-link to="/ready">阅读</router-link></p>
+          <p @click='toggleMenu'><router-link to="/music">音乐</router-link></p>
+          <p @click='toggleMenu'><router-link to="/movie">影视</router-link></p>
       </div>
 
   </div>
